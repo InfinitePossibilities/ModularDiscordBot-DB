@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/database.js",
+  "types": "./dist/database.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 12"
   },
   "author": "",
