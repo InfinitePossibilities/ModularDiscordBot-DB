@@ -1,6 +1,6 @@
-// Last modified: 2021/11/21 18:44:01
+// Last modified: 2021/11/25 02:29:44
 import { Guild } from 'discord.js';
-import { Schema, Model, model, models, SchemaTypes } from 'mongoose';
+import { Schema, Model, model, models, SchemaTypes, modelNames } from 'mongoose';
 import { guildSettingsSchema, mainSettingsSchema } from './interfaces';
 
 export {
@@ -20,7 +20,7 @@ class db {
      * @param records Array of records
      */
     async createRecords(records: any[]) {
-        (this.model as Model<any, {}, {}>).insertMany(records);
+        return (this.model as Model<any, {}, {}>).insertMany(records);
     }
 
     async createCollection() {

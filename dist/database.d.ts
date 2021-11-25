@@ -9,7 +9,7 @@ declare class db {
      * Add records to database collection
      * @param records Array of records
      */
-    createRecords(records: any[]): Promise<void>;
+    createRecords(records: any[]): Promise<any[]>;
     createCollection(): Promise<void>;
     /**
      * Read records from database collection
