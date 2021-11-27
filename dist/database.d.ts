@@ -19,6 +19,13 @@ declare class db {
      */
     readRecords(querys: any[] | undefined, options?: string): Promise<any[]>;
     /**
+     * Read all records from database collection
+     * @param querys Record array of JSON search objects
+     * @param options Optional properties to return
+     * @returns Records, if any
+     */
+    readAllRecords(): Promise<any[]>;
+    /**
      * Replace entire Records in database collection
      * @param querys Record array of JSON search objects
      * @param newValue New Records to replace found querys, if any

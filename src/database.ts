@@ -1,4 +1,4 @@
-// Last modified: 2021/11/25 02:29:44
+// Last modified: 2021/11/27 02:23:59
 import { Guild } from 'discord.js';
 import { Schema, Model, model, models, SchemaTypes, modelNames } from 'mongoose';
 import { guildSettingsSchema, mainSettingsSchema } from './interfaces';
@@ -52,6 +52,16 @@ class db {
         }
 
         return returns;
+    }
+
+    /**
+     * Read all records from database collection
+     * @param querys Record array of JSON search objects
+     * @param options Optional properties to return
+     * @returns Records, if any
+     */
+     async readAllRecords() {
+        return await (this.model as Model<any, {}, {}>).find();
     }
 
     /**
